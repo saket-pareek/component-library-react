@@ -1,0 +1,110 @@
+body:has(.pizza-menu) {
+  background-color: #f7f2e9;
+}
+
+.pizza-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  border-bottom: 15px solid #edc84b;
+  padding-bottom: 60px;
+
+  &__heading {
+    margin-top: 50px;
+    font-size: 50px;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: #edc84b;
+  }
+
+  &__sub-heading {
+    max-width: max-content;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    font-size: 30px;
+    line-height: 50px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    max-width: 50%;
+    text-align: center;
+    font-size: 19px;
+    line-height: 28px;
+    font-weight: 300;
+    color: #4b5563;
+  }
+
+  &__list-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    max-width: 70%;
+
+    .pizza-menu__list {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+
+      &--sold-out {
+        filter: grayscale(100%);
+      }
+
+      .pizza-menu__img {
+        width: 150px;
+      }
+
+      .pizza-menu__list-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 10px 0;
+
+        .pizza-menu__list-text {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .pizza-menu__name {
+            font-size: 22px;
+            font-weight: 300;
+          }
+
+          .pizza-menu__ingredients {
+            font-size: 17px;
+            font-style: italic;
+            color: #9ca3af;
+          }
+        }
+
+        .pizza-menu__price {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  &__footer {
+    max-width: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  &__cta {
+    cursor: pointer;
+    border: 0;
+    background-color: #edc84b;
+    padding: 15px 40px;
+    font-size: 18px;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #e9bb24;
+    }
+  }
+}
