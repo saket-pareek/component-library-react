@@ -1,0 +1,74 @@
+.rock-paper-scissors {
+  text-align: center;
+
+  &__heading {
+    font-size: 32px;
+  }
+
+  &__sub-heading {
+    margin-top: 25px;
+    font-size: 25px;
+  }
+
+  &__btns-container {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  &__btn {
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 45px;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &--rock {
+      background-color: #ff0000;
+    }
+
+    &--paper {
+      background-color: #2196f3;
+    }
+
+    &--scissors {
+      background-color: #4caf50;
+    }
+  }
+
+  &__message {
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  &__score {
+    margin-top: 20px;
+    font-size: 25px;
+    display: flex;
+    gap: 10px;
+
+    .rock-paper-scissors__user-wins {
+      color: #2196f3;
+    }
+
+    .rock-paper-scissors__computer-wins {
+      color: #ff0000;
+    }
+  }
+
+  &__reset {
+    border: 0;
+    padding: 10px 20px;
+    background-color: #376f9c;
+    font-size: 20px;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+  }
+}

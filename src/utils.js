@@ -39,10 +39,14 @@ const getLocalStorage = keyName => JSON.parse(localStorage.getItem(keyName));
 const setLocalStorage = (keyName, value) =>
   localStorage.setItem(keyName, JSON.stringify(value));
 
+const generateRandomNumber = (min, max) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
 export {
   filterDuplicateKey,
   fetchData,
   calculateArrAverage,
   getLocalStorage,
   setLocalStorage,
+  generateRandomNumber,
 };
