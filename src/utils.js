@@ -42,6 +42,12 @@ const setLocalStorage = (keyName, value) =>
 const generateRandomNumber = (min, max) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
+const subtractDaysFromDate = (newDate, noOfDays) => {
+  const date = new Date(newDate);
+  date.setDate(newDate.getDate() + noOfDays);
+  return date;
+};
+
 export {
   filterDuplicateKey,
   fetchData,
@@ -49,4 +55,5 @@ export {
   getLocalStorage,
   setLocalStorage,
   generateRandomNumber,
+  subtractDaysFromDate,
 };

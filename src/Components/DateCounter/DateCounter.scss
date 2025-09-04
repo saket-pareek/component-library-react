@@ -1,0 +1,67 @@
+body:has(.date-counter) {
+  background-color: #343a40;
+}
+
+.date-counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+  font-size: 20px;
+  color: white;
+
+  &__input-range-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__input-range {
+    cursor: pointer;
+  }
+
+  &__input-text-container {
+    display: flex;
+  }
+
+  &__decrement-btn,
+  &__increment-btn {
+    border: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #e7eaee; // gray-300
+    padding: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #d1d5db; // same gray-300 hover
+    }
+  }
+
+  &__input-text {
+    width: 250px;
+    padding: 10px;
+    font-size: 25px;
+  }
+
+  &__date {
+    font-size: 22px;
+  }
+
+  &__reset-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #d1d5db; // gray-300
+    }
+  }
+}
