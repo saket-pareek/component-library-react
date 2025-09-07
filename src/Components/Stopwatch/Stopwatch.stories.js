@@ -5,7 +5,7 @@ const meta = {
   component: Stopwatch,
   tags: ['docsPage'],
   parameters: {
-    layout: 'fullscreen',
+    layout: 'centered',
   },
   argTypes: {
     title: {
