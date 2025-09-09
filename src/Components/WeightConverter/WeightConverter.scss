@@ -1,0 +1,62 @@
+body:has(.weight-converter) {
+  background: linear-gradient(to left top, yellow, lightblue, yellow);
+}
+
+.weight-converter {
+  border-radius: 10px;
+  background-color: #ffffff4d;
+  padding: 30px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); // shadow-2xl
+
+  &__heading {
+    font-size: 32px;
+    font-weight: 300; // font-light
+    color: #0f766e; // teal-700
+  }
+
+  &__form-control {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    label {
+      font-weight: 400;
+      font-size: 16px;
+      color: #333; // you can adjust for better contrast
+    }
+  }
+
+  &__weight-input {
+    width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ffffff4d;
+    background-color: #ffffff4d;
+    padding: 5px 10px;
+    font-size: 20px;
+    outline: none;
+
+    &:focus {
+      border-color: #0f766e; // highlight on focus
+      background-color: #ffffffcc;
+    }
+  }
+
+  &__result-text {
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 0.05em; // tracking-wider
+    color: #0f766e;
+
+    .weight-converter__computed-weight {
+      margin-left: 8px;
+      font-weight: 500;
+    }
+  }
+
+  &__error {
+    margin-top: 20px;
+    font-size: 18px;
+    color: red;
+  }
+}
