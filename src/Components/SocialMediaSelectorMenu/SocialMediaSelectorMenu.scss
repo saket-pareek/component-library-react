@@ -1,0 +1,6 @@
+body:has(.social-media-selector-menu) {
+  height: 100vh;
+  background: linear-gradient(135deg, purple 20%, orange 80%);
+  display: flex !important;
+  justify-content: center;
+}

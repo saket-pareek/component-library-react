@@ -1,12 +1,14 @@
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import { peerDependencies } from './package.json';
+import svgr from '@svgr/rollup';
 import { defineConfig } from 'vite';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   plugins: [
     react(),
+    svgr(),
     tailwindcss(),
     dts({
       insertTypesEntry: true,
