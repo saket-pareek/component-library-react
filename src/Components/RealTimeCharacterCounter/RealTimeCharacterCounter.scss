@@ -1,0 +1,9 @@
+body:has(.real-time-character-counter) {
+  background-color: salmon;
+}
+
+.real-time-character-counter {
+  input::-webkit-input-placeholder {
+    vertical-align: text-top;
+  }
+}

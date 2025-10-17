@@ -1,9 +1,6 @@
 import { useEffect } from "react";
-import { useQuizContext } from "../contexts/QuizContext";
 
-function Timer() {
-  const { secondsRemaining, dispatch } = useQuizContext();
-
+function Timer({ dispatch, secondsRemaining }) {
   const mins = Math.floor(secondsRemaining / 60);
   const seconds = secondsRemaining % 60;
 
@@ -12,6 +9,7 @@ function Timer() {
       const id = setInterval(function () {
         dispatch({ type: "tick" });
       }, 1000);
+
       return () => clearInterval(id);
     },
     [dispatch]
